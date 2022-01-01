@@ -1,0 +1,48 @@
+.user__dashboard{
+    @extend .admin__dashboard;
+
+    .content{
+        @include flexBox(row, flex-start, center);
+        margin-bottom: 2rem;
+
+        input{
+            margin-bottom: 0rem;
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            max-width: 100px;
+            color : white;
+
+            i:before, i:after{
+                color : white;
+            }
+
+            &:hover{
+                background : rgba($app_color, 0.8);
+                outline-color: white;
+                outline-offset: -3px;
+            }
+        }
+    }
+
+    .result__div{
+        width: 100%;
+        max-width: 100px;
+        min-height: 40px;
+        font-weight: 600;
+        border-radius: 4px;
+        color : white;
+
+        @include flexBox(row, center, center);
+
+        &.success{
+            background-color: #4DD637;
+        }
+
+        &.error{
+            background-color: #E21717;
+        }
+    }
+}

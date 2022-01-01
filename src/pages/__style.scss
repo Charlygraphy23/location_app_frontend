@@ -1,0 +1,140 @@
+.login__page {
+  @include flexBox(column, center, center);
+  min-height: 100vh;
+  position: relative;
+
+  $card_height: 600px;
+  $card_width: 460px;
+  overflow: hidden;
+
+  .background__illustrate {
+    z-index: 1;
+    width: 100%;
+    background-color: $app_color;
+    height: 100%;
+    width: calc( #{$card_width} + 10rem);
+    height: calc(  #{$card_height} + 3rem);
+    animation : background-illustration 0.5s ease-in-out forwards;
+  }
+
+  .form__section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
+    width: 100%;
+    max-width: $card_width;
+    min-height: $card_height;
+    box-shadow: 0px 5px 10px rgba(black, 0.1), 10px 40px 30px rgba(black, 0.1);
+    @include flexBox(column, center, center);
+    border-radius: 8px;
+    border: 1px solid rgba(black, 0.1);
+    z-index: 3;
+    background: white;
+    animation: card-animation 0.3s ease-in-out forwards;
+    overflow : hidden;
+
+  }
+}
+
+@keyframes card-animation {
+
+    0%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8)
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: translate(-50%, -50%) scale(1)
+    }
+    
+}
+
+@keyframes background-illustration {
+
+    0%{
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        transform : rotate(0deg) scale(0.5);
+    }
+    100%{
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        transform : rotate(25deg) scale(1);
+    }
+    
+}
+
+
+@media screen and (max-width: 1030px) {
+
+    .login__page {      
+        $card_height: 500px;
+        $card_width: 390px;
+      
+        .background__illustrate {
+          width: calc( #{$card_width} + 6rem);
+          height: calc(  #{$card_height} + 3rem);
+      
+        }
+      
+        .form__section {
+          max-width: $card_width;
+          min-height: $card_height;
+      
+        }
+      }
+    
+}
+
+@media screen and (max-width: 830px) {
+
+    .login__page {      
+        $card_height: 500px;
+        $card_width: 360px;
+      
+        .background__illustrate {
+          width: calc( #{$card_width} + 3rem);
+          height: calc(  #{$card_height} + 1rem);
+      
+        }
+      
+        .form__section {
+          max-width: $card_width;
+          min-height: $card_height;
+      
+        }
+      }
+    
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .login__page {      
+        $card_height: 100%;
+        $card_width: 100%;
+      
+        .background__illustrate {
+          width: calc( #{$card_width} + 3rem);
+          height: calc(  #{$card_height} + 1rem);
+      
+        }
+      
+        .form__section {
+          max-width: $card_width;
+          min-height: $card_height;
+      
+        }
+      }
+    
+}

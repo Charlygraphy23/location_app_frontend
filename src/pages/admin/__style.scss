@@ -1,0 +1,146 @@
+.admin__dashboard{
+    width: 100%;
+    min-height: calc(100vh - #{$navbar_height});
+    @include flexBox(column, center, center);
+
+    .content{
+        @include flexBox(column, flex-start, center);
+        width: 100%;
+        max-width: 800px;
+
+        input{
+            min-height: 1.5em;
+            font-size: 1.3rem;
+            padding : 0.5em 1em;
+            flex: 1;
+            border : 1px solid $app_color;
+            outline : none;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            color : rgba($font__color , 0.7)
+        }
+
+        button {
+            width: 100%;
+            max-width: 200px;
+            border : 2px solid transparent;
+            min-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            background : $app_color;
+            color : white;
+            text-align: center; 
+            transition: 0.2s;
+            border-radius: 4px;
+            outline : 1px solid $app_color;
+
+            &:hover{
+                background : rgba($app_color, 0.8);
+                outline-color: white;
+                outline-offset: -3px;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 850px){
+
+    .admin__dashboard{
+    
+        .content{
+
+            width: 100%;
+            max-width: 500px;
+    
+            input{
+                min-height: 1.5em;
+                font-size: 1rem;
+                padding : 0.5em 1em;
+                flex: 1;
+                border : 1px solid $app_color;
+                outline : none;
+                border-radius: 5px;
+                width: 100%;
+                margin-bottom: 1.5rem;
+                color : rgba($font__color , 0.7)
+            }
+    
+            button {
+                width: 100%;
+                max-width: 160px;
+                border : 2px solid transparent;
+                min-height: 40px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                background : $app_color;
+                color : white;
+                text-align: center; 
+                transition: 0.2s;
+                border-radius: 4px;
+                outline : 1px solid $app_color;
+    
+                &:hover{
+                    background : rgba($app_color, 0.8);
+                    outline-color: white;
+                    outline-offset: -3px;
+                }
+            }
+        }
+    
+    
+    }
+    
+}
+
+
+@media screen and (max-width: 590px){
+
+    .admin__dashboard{
+    
+        .content{
+
+            width: 100%;
+            max-width: 300px;
+    
+            input{
+                min-height: 1.5em;
+                font-size: 1rem;
+                padding : 0.5em 1em;
+                flex: 1;
+                border : 1px solid $app_color;
+                outline : none;
+                border-radius: 5px;
+                width: 100%;
+                margin-bottom: 1.5rem;
+                color : rgba($font__color , 0.7)
+            }
+    
+            button {
+                width: 100%;
+                max-width: 120px;
+                border : 2px solid transparent;
+                min-height: 30px;
+                font-size: 1rem;
+                font-weight: 500;
+                background : $app_color;
+                color : white;
+                text-align: center; 
+                transition: 0.2s;
+                border-radius: 4px;
+                outline : 1px solid $app_color;
+    
+                &:hover{
+                    background : rgba($app_color, 0.8);
+                    outline-color: white;
+                    outline-offset: -3px;
+                }
+            }
+        }
+    
+    
+    }
+    
+}

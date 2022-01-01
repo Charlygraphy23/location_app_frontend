@@ -1,0 +1,22 @@
+
+@import './constants/_color';
+@import './constants/_veriables';
+@import './functions/__models';
+
+// components
+@import '../components/loader/__style';
+@import '../components/login/_style';
+@import '../components/navbar/_style';
+
+
+//pages
+@import '../pages/_style';
+@import '../pages/admin/__style';
+@import '../pages/user/__style';
+
+
+button:disabled{
+    opacity: 0.5;
+    pointer-events : none;
+    cursor: not-allowed;
+}
